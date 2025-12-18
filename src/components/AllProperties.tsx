@@ -62,35 +62,35 @@ const properties = [
 
 const AllProperties = () => {
   return (
-    <section className="bg-black py-16">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="bg-black py-10 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header Section */}
-        <div className="mb-16">
-          <span className="text-[#af8e5b] text-lg mb-4 block">All Properties</span>
-          <h2 className="text-white text-4xl md:text-5xl font-light mb-8">
+        <div className="mb-10 md:mb-16">
+          <span className="text-[#af8e5b] text-base md:text-lg mb-3 md:mb-4 block">All Properties</span>
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-6 md:mb-8">
             Explore Our Properties
           </h2>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-3 md:gap-4">
               {/* Decorative element */}
               <div className="flex items-center gap-2">
-                <div className="w-12 h-px bg-white" />
-                <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-white" />
+                <div className="w-8 md:w-12 h-px bg-white" />
+                <div className="w-6 md:w-8 h-6 md:h-8 rounded-full border-2 border-white flex items-center justify-center">
+                  <div className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-white" />
                 </div>
               </div>
-              <span className="text-gray-400 text-xl">Discover your dream home</span>
+              <span className="text-gray-400 text-base md:text-xl">Discover your dream home</span>
             </div>
             <Link
               href="/properties"
-              className="bg-[#af8e5b] text-white px-6 py-3 rounded hover:bg-[#9a7d4f] transition-colors"
+              className="bg-[#af8e5b] text-white px-4 md:px-6 py-2.5 md:py-3 rounded text-sm md:text-base hover:bg-[#9a7d4f] transition-colors self-start sm:self-auto"
             >
               Explore More
             </Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           {properties.map((property) => (
             <Link
               key={property.id}
@@ -99,7 +99,7 @@ const AllProperties = () => {
             >
               <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 {/* Image Container */}
-                <div className="relative h-72 md:h-80">
+                <div className="relative h-52 sm:h-64 md:h-72 lg:h-80">
                   <Image
                     src={property.image}
                     alt={property.title}
@@ -108,39 +108,39 @@ const AllProperties = () => {
                   />
 
                   {/* Property Stats Overlay */}
-                  <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+                  <div className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 flex flex-col gap-2 md:gap-3">
                     {/* Beds */}
-                    <div className="flex items-center gap-2 bg-[#2a2a2a]/80 backdrop-blur-sm px-3 py-2 rounded-md">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-1.5 md:gap-2 bg-[#2a2a2a]/80 backdrop-blur-sm px-2 md:px-3 py-1.5 md:py-2 rounded-md">
+                      <svg className="w-4 md:w-5 h-4 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                       </svg>
-                      <span className="text-white text-sm font-medium">{property.beds}</span>
+                      <span className="text-white text-xs md:text-sm font-medium">{property.beds}</span>
                     </div>
 
                     {/* Baths */}
-                    <div className="flex items-center gap-2 bg-[#2a2a2a]/80 backdrop-blur-sm px-3 py-2 rounded-md">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-1.5 md:gap-2 bg-[#2a2a2a]/80 backdrop-blur-sm px-2 md:px-3 py-1.5 md:py-2 rounded-md">
+                      <svg className="w-4 md:w-5 h-4 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M4 16V8a4 4 0 014-4h1m7 12h4M4 16h16M8 4h.01M12 4h8v4H12V4z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">{property.baths}</span>
+                      <span className="text-white text-xs md:text-sm font-medium">{property.baths}</span>
                     </div>
 
                     {/* Parking */}
-                    <div className="flex items-center gap-2 bg-[#2a2a2a]/80 backdrop-blur-sm px-3 py-2 rounded-md">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-1.5 md:gap-2 bg-[#2a2a2a]/80 backdrop-blur-sm px-2 md:px-3 py-1.5 md:py-2 rounded-md">
+                      <svg className="w-4 md:w-5 h-4 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h8m-8 4h8m-6 4h4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
                       </svg>
-                      <span className="text-white text-sm font-medium">{property.parking}</span>
+                      <span className="text-white text-xs md:text-sm font-medium">{property.parking}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Property Info */}
-                <div className="p-6 flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                <div className="p-4 md:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <h3 className="text-base md:text-lg font-semibold text-gray-900">
                     {property.title}
                   </h3>
-                  <p className="text-lg font-semibold text-[#af8e5b]">
+                  <p className="text-base md:text-lg font-semibold text-[#af8e5b]">
                     {property.price}
                   </p>
                 </div>

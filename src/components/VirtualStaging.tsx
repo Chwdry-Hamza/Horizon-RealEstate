@@ -7,25 +7,25 @@ const VirtualStaging = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="bg-[#1a1a1a] py-20">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="bg-[#1a1a1a] py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="mb-16">
-          <span className="text-[#af8e5b] text-lg font-medium">Virtual Staging</span>
+        <div className="mb-10 md:mb-16">
+          <span className="text-[#af8e5b] text-base md:text-lg font-medium">Virtual Staging</span>
 
-          <h2 className="text-white text-4xl md:text-5xl font-semibold mt-4 mb-6">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-3 md:mt-4 mb-4 md:mb-6">
             Transform Your Home With Expert
           </h2>
 
           {/* Virtual Staging indicator */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 md:gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-12 h-0.5 bg-white" />
-              <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-white" />
+              <div className="w-8 md:w-12 h-0.5 bg-white" />
+              <div className="w-6 md:w-8 h-6 md:h-8 rounded-full border-2 border-white flex items-center justify-center">
+                <div className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-white" />
               </div>
             </div>
-            <span className="text-gray-500 text-3xl md:text-4xl font-light">Virtual Staging</span>
+            <span className="text-gray-500 text-lg sm:text-xl md:text-3xl lg:text-4xl font-light">Virtual Staging</span>
           </div>
         </div>
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ContactLocation = () => {
   return (
-    <section className="relative bg-black py-24 overflow-hidden">
+    <section className="relative bg-black py-12 md:py-24 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Gradient orbs */}
@@ -16,33 +16,33 @@ const ContactLocation = () => {
         <div className="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-transparent via-[#af8e5b]/10 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 md:mb-12">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-0.5 bg-linear-to-r from-[#af8e5b] to-transparent" />
-              <span className="text-[#af8e5b] text-xl font-medium tracking-wider uppercase">Location</span>
+            <div className="flex items-center gap-3 mb-3 md:mb-4">
+              <div className="w-8 md:w-12 h-0.5 bg-linear-to-r from-[#af8e5b] to-transparent" />
+              <span className="text-[#af8e5b] text-base md:text-xl font-medium tracking-wider uppercase">Location</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-4 md:mb-6">
               <span className="text-white">Our Office</span>
               <br />
               <span className="text-white/40 italic">On The Map</span>
             </h2>
 
             {/* Explore indicator */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 md:gap-4">
               <div className="flex items-center gap-2">
-                <div className="w-10 h-0.5 bg-white/30" />
-                <div className="w-10 h-10 rounded-full border-2 border-[#af8e5b] flex items-center justify-center group hover:bg-[#af8e5b]/10 transition-colors cursor-pointer">
-                  <svg className="w-4 h-4 text-[#af8e5b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-6 md:w-10 h-0.5 bg-white/30" />
+                <div className="w-8 md:w-10 h-8 md:h-10 rounded-full border-2 border-[#af8e5b] flex items-center justify-center group hover:bg-[#af8e5b]/10 transition-colors cursor-pointer">
+                  <svg className="w-3 md:w-4 h-3 md:h-4 text-[#af8e5b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
               </div>
-              <span className="text-gray-500 text-2xl md:text-3xl font-light">Explore Location</span>
+              <span className="text-gray-500 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light">Explore Location</span>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ const ContactLocation = () => {
           <Link
             href="https://maps.google.com/?q=New+York"
             target="_blank"
-            className="mt-8 lg:mt-0 inline-flex items-center gap-3 bg-linear-to-r from-[#c9a86c] via-[#af8e5b] to-[#8a7045] hover:shadow-lg hover:shadow-[#af8e5b]/20 text-black font-semibold px-8 py-4 rounded-xl transition-all duration-300 group"
+            className="mt-6 lg:mt-0 inline-flex items-center gap-2 md:gap-3 bg-linear-to-r from-[#c9a86c] via-[#af8e5b] to-[#8a7045] hover:shadow-lg hover:shadow-[#af8e5b]/20 text-black font-semibold px-5 md:px-8 py-3 md:py-4 rounded-lg md:rounded-xl transition-all duration-300 group text-sm md:text-base"
           >
             <span>Get Directions</span>
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +69,7 @@ const ContactLocation = () => {
           <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-[#af8e5b] rounded-br-xl" />
 
           {/* Map */}
-          <div className="relative w-full h-125 rounded-2xl overflow-hidden bg-[#1a1a1a]">
+          <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-125 rounded-xl md:rounded-2xl overflow-hidden bg-[#1a1a1a]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596073366!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1703000000000!5m2!1sen!2s"
               width="100%"
@@ -81,7 +81,7 @@ const ContactLocation = () => {
             />
 
             {/* Floating location card */}
-            <div className="absolute bottom-6 left-6 right-6 md:right-auto md:max-w-sm bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl">
+            <div className="absolute bottom-3 md:bottom-6 left-3 md:left-6 right-3 md:right-6 lg:right-auto md:max-w-sm bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl md:rounded-2xl p-4 md:p-6 shadow-2xl">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-xl bg-linear-to-br from-[#c9a86c] to-[#af8e5b] flex items-center justify-center shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +113,7 @@ const ContactLocation = () => {
         </div>
 
         {/* Location Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12">
           {[
             { number: "50+", label: "Properties Listed", icon: "🏠" },
             { number: "3", label: "Office Locations", icon: "📍" },
@@ -122,11 +122,11 @@ const ContactLocation = () => {
           ].map((stat, index) => (
             <div
               key={index}
-              className="group bg-linear-to-br from-[#1f1f1f] to-[#141414] rounded-xl p-6 border border-white/5 hover:border-[#af8e5b]/30 transition-all duration-300 text-center"
+              className="group bg-linear-to-br from-[#1f1f1f] to-[#141414] rounded-lg md:rounded-xl p-4 md:p-6 border border-white/5 hover:border-[#af8e5b]/30 transition-all duration-300 text-center"
             >
-              <span className="text-3xl mb-3 block">{stat.icon}</span>
-              <p className="text-[#af8e5b] text-3xl font-bold mb-1">{stat.number}</p>
-              <p className="text-gray-500 text-sm">{stat.label}</p>
+              <span className="text-xl md:text-3xl mb-2 md:mb-3 block">{stat.icon}</span>
+              <p className="text-[#af8e5b] text-xl md:text-3xl font-bold mb-1">{stat.number}</p>
+              <p className="text-gray-500 text-xs md:text-sm">{stat.label}</p>
             </div>
           ))}
         </div>

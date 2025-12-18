@@ -26,7 +26,7 @@ const OfficeTime = () => {
   ];
 
   return (
-    <section className="relative bg-linear-to-b from-[#0f0f0f] to-[#1a1a1a] py-24 overflow-hidden">
+    <section className="relative bg-linear-to-b from-[#0f0f0f] to-[#1a1a1a] py-12 md:py-24 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
@@ -40,35 +40,35 @@ const OfficeTime = () => {
         }} />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-10 md:mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-0.5 bg-linear-to-r from-[#af8e5b] to-transparent" />
-              <span className="text-[#af8e5b] text-lg font-medium tracking-wider uppercase">Office Hours</span>
+            <div className="flex items-center gap-3 mb-3 md:mb-4">
+              <div className="w-8 md:w-12 h-0.5 bg-linear-to-r from-[#af8e5b] to-transparent" />
+              <span className="text-[#af8e5b] text-base md:text-lg font-medium tracking-wider uppercase">Office Hours</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-3 md:mb-4">
               <span className="text-white">Our International</span>
               <br />
               <span className="text-white/40 italic">Offices</span>
             </h2>
 
             {/* Time indicator */}
-            <div className="flex items-center gap-4 mt-6">
-              <span className="text-white text-2xl md:text-3xl font-semibold">Time Zone</span>
+            <div className="flex items-center gap-3 md:gap-4 mt-4 md:mt-6">
+              <span className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">Time Zone</span>
               <div className="flex items-center gap-2">
-                <div className="w-10 h-0.5 bg-white/30" />
-                <div className="w-8 h-8 rounded-full border-2 border-[#af8e5b] flex items-center justify-center animate-pulse">
-                  <div className="w-2 h-2 rounded-full bg-[#af8e5b]" />
+                <div className="w-6 md:w-10 h-0.5 bg-white/30" />
+                <div className="w-6 md:w-8 h-6 md:h-8 rounded-full border-2 border-[#af8e5b] flex items-center justify-center animate-pulse">
+                  <div className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-[#af8e5b]" />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Animated Badge */}
-          <div className="relative w-36 h-36 md:w-44 md:h-44 shrink-0 mt-8 lg:mt-0 group">
+          {/* Animated Badge - Hidden on mobile */}
+          <div className="hidden lg:block relative w-36 h-36 md:w-44 md:h-44 shrink-0 mt-8 lg:mt-0 group">
             <div className="absolute inset-0 rounded-full bg-[#af8e5b]/10 blur-2xl group-hover:bg-[#af8e5b]/20 transition-all duration-500" />
             <div className="relative w-full h-full rounded-full bg-linear-to-br from-[#c9a86c] via-[#af8e5b] to-[#8a7045] flex items-center justify-center shadow-xl shadow-[#af8e5b]/10">
               {/* Rotating text */}
@@ -97,7 +97,7 @@ const OfficeTime = () => {
         </div>
 
         {/* Office Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {officeLocations.map((office, index) => (
             <div
               key={index}
@@ -106,7 +106,7 @@ const OfficeTime = () => {
               {/* Card glow */}
               <div className="absolute -inset-0.5 bg-linear-to-r from-[#af8e5b]/0 via-[#af8e5b]/20 to-[#af8e5b]/0 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
-              <div className="relative bg-linear-to-br from-[#1f1f1f] to-[#141414] rounded-2xl p-8 border border-white/5 hover:border-[#af8e5b]/30 transition-all duration-500 overflow-hidden">
+              <div className="relative bg-linear-to-br from-[#1f1f1f] to-[#141414] rounded-xl md:rounded-2xl p-5 md:p-8 border border-white/5 hover:border-[#af8e5b]/30 transition-all duration-500 overflow-hidden">
                 {/* Background decoration */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#af8e5b]/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
 
@@ -152,7 +152,7 @@ const OfficeTime = () => {
         </div>
 
         {/* Bottom info bar */}
-        <div className="mt-12 bg-linear-to-r from-[#af8e5b]/10 via-[#af8e5b]/5 to-[#af8e5b]/10 rounded-2xl p-8 border border-[#af8e5b]/20">
+        <div className="mt-8 md:mt-12 bg-linear-to-r from-[#af8e5b]/10 via-[#af8e5b]/5 to-[#af8e5b]/10 rounded-xl md:rounded-2xl p-5 md:p-8 border border-[#af8e5b]/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 rounded-full bg-[#af8e5b]/20 flex items-center justify-center">

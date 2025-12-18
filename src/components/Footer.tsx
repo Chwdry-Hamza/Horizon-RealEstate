@@ -18,11 +18,11 @@ const Footer = () => {
       <div className="absolute top-20 right-10 w-64 h-64 bg-[#af8e5b]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-48 h-48 bg-[#af8e5b]/5 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-8 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-20 relative z-10">
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 mb-10 md:mb-16">
           {/* Logo and Description - Takes more space */}
-          <div className="md:col-span-5">
+          <div className="sm:col-span-2 lg:col-span-5">
             <Link href="/" className="mb-8 inline-block">
               <Image
                 src="/HorizonHomesLogo.png"
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-3">
+          <div className="lg:col-span-3">
             <h4 className="text-white text-xl font-semibold mb-8 relative">
               Quick Links
               <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-[#af8e5b]" />
@@ -87,7 +87,7 @@ const Footer = () => {
           </div>
 
           {/* Get In Touch */}
-          <div className="md:col-span-4">
+          <div className="lg:col-span-4">
             <h4 className="text-white text-xl font-semibold mb-8 relative">
               Get In Touch
               <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-[#af8e5b]" />
